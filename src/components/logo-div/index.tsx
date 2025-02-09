@@ -5,7 +5,7 @@ import { Title } from '../main/Title'
 const LogoDiv = styled.div`
   display: flex;
   flex-direction: row;
-  margin-left: 50px;
+  margin-left: 120px;
 `
 
 export function LogoComponent() {

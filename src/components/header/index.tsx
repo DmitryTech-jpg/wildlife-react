@@ -12,7 +12,6 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-top: 30px;
-  margin-left: 15px;
 `
 
 function Header() {
