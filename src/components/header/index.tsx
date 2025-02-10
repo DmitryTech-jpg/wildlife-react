@@ -6,7 +6,7 @@ import { LogoComponent } from '../logo-div'
 import { Button } from '../button'
 import { TextLink } from '../text-link'
 
-const HeaderContainer = styled.div`
+const HeaderDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -16,7 +16,7 @@ const HeaderContainer = styled.div`
 
 function Header() {
   return (
-    <HeaderContainer>
+    <HeaderDiv>
       <LogoComponent />
 
       <NavDiv>
@@ -35,7 +35,7 @@ function Header() {
           </li>
         </ul>
       </NavDiv>
-    </HeaderContainer>
+    </HeaderDiv>
   )
 }
 export default Header

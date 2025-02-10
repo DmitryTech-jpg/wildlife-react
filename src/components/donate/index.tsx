@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Button = styled.button`
+export const Button = styled.button<{ filled?: boolean }>`
   padding: 16px 42px;
   font-family: Roboto;
   font-size: 23px;
@@ -10,7 +10,7 @@ export const Button = styled.button`
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #f7f7f7;
-  background: #cd6326;
+  background-color: #cd6326;
   border: 0;
   border-radius: 5px;
 `
