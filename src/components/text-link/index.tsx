@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const LinkStyle = styled.a`
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto';
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
