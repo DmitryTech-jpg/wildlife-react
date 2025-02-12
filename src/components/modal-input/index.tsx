@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const InputStyle = styled.input`
+export const ModalInput = styled.input`
   font-size: 17px;
   border: none;
   color: #bdbdbd;
