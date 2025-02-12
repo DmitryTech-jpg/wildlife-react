@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { NavDiv } from '../main/NavDiv'
-import { Navi } from '../main/Navi'
+import { NavDiv } from '../main/nav-div'
+import { Navi } from '../main/navi'
 import { Magnifier } from '../../icons/Magnifier'
 import { LogoComponent } from '../logo-div'
 import { Button } from '../button'

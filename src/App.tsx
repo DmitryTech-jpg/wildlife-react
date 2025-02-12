@@ -1,12 +1,13 @@
 import './index.css'
 import { MainDiv } from './components/main-div'
 import Header from './components/header'
-import { Wrapper } from './components/main/Wrapper'
-import { Survival } from './components/main/Survival'
-import { SurvivalSubtitle } from './components/SurvivalSubtitle'
-import { SurvivalText } from './components/SurvivalText'
+import { Wrapper } from './components/main/wrapper'
+import { Survival } from './components/main/survival'
+import { SurvivalSubtitle } from './components/survival-subtitle'
+import { SurvivalText } from './components/survival-text'
 import { Button } from './components/donate'
 import LatestArticles from './components/latest-articles'
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         </Survival>
       </Wrapper>
       <LatestArticles />
+      <Footer />
     </MainDiv>
   )
 }

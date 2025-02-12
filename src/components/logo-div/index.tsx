@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Logo } from '../../icons/Logo'
-import { Title } from '../main/Title'
+import { Title } from '../main/title'
 
 const LogoDiv = styled.div`
   display: flex;
