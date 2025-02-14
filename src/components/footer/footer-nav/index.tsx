@@ -8,5 +8,5 @@ export const FooterNav = styled.nav`
     justify-content: space-between;
     list-style-type: none;
     align-items: center;
-    gap: 5em;
+    gap: 90px;
 `

@@ -5,4 +5,5 @@ export const LinksDiv = styled.li`
   flex-direction: row;
   align-items: center;
   width: 100%;
+  gap: 27px;
 `
