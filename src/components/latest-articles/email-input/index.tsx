@@ -10,4 +10,5 @@ export const EmailInput = styled.input`
   font-style: normal;
   border-right: none;
   border-color: #666666;
+  padding-left: 23px;
 `
