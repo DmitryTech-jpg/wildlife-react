@@ -1,5 +1,7 @@
 import './index.css'
 import { MainDiv } from './components/main-div'
+import { useState } from 'react'
+import { ModalDiv } from './components/modal-win'
 import Header from './components/header'
 import { Wrapper } from './components/main/wrapper'
 import { Survival } from './components/main/survival'
@@ -10,17 +12,22 @@ import LatestArticles from './components/latest-articles'
 import Footer from './components/footer'
 
 function App() {
+  const [isModalActive, setModalActive] = useState<boolean>(false)
+
   return (
     <MainDiv>
       <Wrapper>
         <Header />
+        <ModalDiv active={isModalActive} setActive={setModalActive} />
         <Survival>
           <SurvivalText>Survival</SurvivalText>
           <SurvivalSubtitle>
             What this means is that we exist to help protect our environment and do in numbers of ways. You can save the
             planet by donation.
           </SurvivalSubtitle>
-          <Button>Donate</Button>
+          <Button filled onClick={() => setModalActive(true)}>
+            Donate
+          </Button>
         </Survival>
       </Wrapper>
       <LatestArticles />
