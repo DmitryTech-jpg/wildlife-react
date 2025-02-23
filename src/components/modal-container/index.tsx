@@ -1,6 +1,15 @@
 import styled from 'styled-components'
 import { useState } from 'react'
-import { ModalInput } from '../modal-input'
+
+export const ModalInput = styled.input`
+  font-size: 17px;
+  border: none;
+  color: #bdbdbd;
+  border-bottom: 1px solid #fcfcfc;
+  padding: 5px 0;
+  outline: none;
+  background: none;
+`
 
 interface PopupOverlayProps {
   show: boolean
@@ -11,7 +20,7 @@ interface ModalContainerProps {
   setActive: (value: boolean) => void
 }
 
-const ModalWin = styled.div<PopupOverlayProps>`
+const ModalContainer = styled.div<PopupOverlayProps>`
   display: ${({ show }) => (show ? 'block' : 'none')};
   position: fixed;
   z-index: 1;
@@ -29,10 +38,11 @@ const ModalContent = styled.div`
   align-items: center;
   background-color: #fcfcfc;
   margin: 20vh auto;
-  padding: 32px;
+  padding: 4, 16, 40;
   border: 1px solid #888;
   border-radius: 15px;
   width: 480px;
+  height: 600px;
   box-shadow:
     0 10px 25px rgba(0, 0, 0, 0.1),
     0 10px 10px rgba(0, 0, 0, 0.05);
@@ -41,23 +51,25 @@ const ModalContent = styled.div`
 const Donate = styled.h3`
   margin-top: 16px;
   margin-bottom: 32px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-size: 48px;
   font-weight: 400;
   line-height: 72px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 `
 
 const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 399px;
-  height: 65px;
-  font-size: 17px;
+  font-family: Open Sans;
   font-weight: 400;
+  font-size: 17px;
   line-height: 27px;
-  color: #bdbdbd;
-  margin-bottom: 8px;
+  letter-spacing: 0%;
+  color: #828282;
+  margin-bottom: 2px;
 `
 
 const InputField = styled.input`
@@ -68,8 +80,9 @@ const InputField = styled.input`
   line-height: 36px;
   border: 0;
   border-bottom: 2px solid #bdbdbd;
-  color: #bdbdbd;
+  color: rgb(0, 0, 0);
   margin-bottom: 32px;
+
   &::placeholder {
     color: #bdbdbd;
   }
@@ -85,6 +98,7 @@ const Textarea = styled.textarea`
   resize: vertical;
   max-height: 200px;
   margin-bottom: 32px;
+
   &::placeholder {
     color: #bdbdbd;
   }
@@ -95,22 +109,22 @@ const ModalBtn = styled.button`
   height: 66px;
   background-color: #e39128;
   border-radius: 5px;
-  font-family: 'Roboto', sans-serif;
+  border: none;
+  font-family: 'Roboto';
   font-size: 18px;
   font-weight: 400;
   line-height: 26.95px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: #f7f7f7;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+
   &:hover {
     background-color: #ff9f43;
   }
 `
 
-export const ModalDiv: React.FC<ModalContainerProps> = ({ active, setActive }) => {
+export const Modal: React.FC<ModalContainerProps> = ({ active, setActive }) => {
   const [name, setName] = useState('')
   const [amount, setAmount] = useState(0)
   const [comment, setComment] = useState('')
@@ -120,43 +134,29 @@ export const ModalDiv: React.FC<ModalContainerProps> = ({ active, setActive }) =
       alert('Please fill in all fields')
       return
     }
-    window.alert(`You successfully sent a donation of
-
-$${amount} from ${name}, with comment "${comment}"`)
+    window.alert(`You successfully sent a donation of $${amount} from ${name}, with the comment: "${comment}"`)
     setActive(false)
   }
 
   return (
-    <ModalWin show={active}>
+    <ModalContainer show={active}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <Donate>Donate</Donate>
-        <Label htmlFor="your-name">Your Name:</Label>
-        <InputField
-          id="your-name"
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Enter your name..."
-        />
-        <Label htmlFor="amount">Amount ($):</Label>
+        <Label htmlFor="your-name">Your name:</Label>
+        <InputField id="your-name" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" />
+        <Label htmlFor="amount">Amount:</Label>
         <InputField
           id="amount"
           type="number"
-          min="0"
           step="any"
           value={amount}
           onChange={(e) => setAmount(parseFloat(e.target.value))}
-          placeholder="Enter the amount..."
+          placeholder="1000$"
         />
-        <Label htmlFor="comment">Your Comment:</Label>
-        <Textarea
-          id="comment"
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
-          placeholder="Enter your comment here..."
-        ></Textarea>
+        <Label htmlFor="comment">Your comment:</Label>
+        <Textarea id="comment" value={comment} onChange={(e) => setComment(e.target.value)} />
         <ModalBtn onClick={onSend}>Send</ModalBtn>
       </ModalContent>
-    </ModalWin>
+    </ModalContainer>
   )
 }

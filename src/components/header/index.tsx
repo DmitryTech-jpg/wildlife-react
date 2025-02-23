@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { NavDiv } from '../main/nav-div'
+import { NavContainer } from '../main/nav-container'
 import { Navi } from '../main/navi'
 import { Magnifier } from '../../icons/Magnifier'
-import { LogoComponent } from '../logo-div'
+import { LogoComponent } from '../logo-container'
 import { Button } from '../button'
 import { TextLink } from '../text-link'
 
@@ -19,22 +19,22 @@ function Header() {
     <HeaderDiv>
       <LogoComponent />
 
-      <NavDiv>
+      <NavContainer>
         <ul>
           <Navi>
             <TextLink href="#articles">Articles</TextLink>
-            <TextLink href="#contacts">Contacts</TextLink>
+            <TextLink href="#telegramm">Contacts</TextLink>
           </Navi>
           <li>
             <Magnifier />
           </li>
           <li>
-            <TextLink href="#!">
+            <TextLink href="#https://www.google.com/">
               <Button>Sign in</Button>
             </TextLink>
           </li>
         </ul>
-      </NavDiv>
+      </NavContainer>
     </HeaderDiv>
   )
 }

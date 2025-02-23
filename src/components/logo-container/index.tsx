@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Logo } from '../../icons/Logo'
 import { Title } from '../main/title'
 
-const LogoDiv = styled.div`
+const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: 120px;
@@ -10,9 +10,9 @@ const LogoDiv = styled.div`
 
 export function LogoComponent() {
   return (
-    <LogoDiv>
+    <LogoContainer>
       <Logo />
       <Title>WILDLIFE</Title>
-    </LogoDiv>
+    </LogoContainer>
   )
 }

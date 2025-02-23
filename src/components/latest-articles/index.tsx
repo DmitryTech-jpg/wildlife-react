@@ -4,7 +4,7 @@ import { Subtitle } from './subtitle'
 import { Wrapper } from './wrapper'
 import { SliderDiv } from './slider'
 import { SubmitButton } from './send-button'
-import { EmailDiv } from './email-div'
+import { EmailContainer } from './email-container'
 import { EmailInput } from './email-input'
 import { AnimalsBlock } from './animals-block'
 import { EmailSubtitle } from './email-subtitle'
@@ -70,10 +70,10 @@ function LatestArticles() {
       </SliderDiv>
       <EmailSubtitle id="email">Get notified about new amazing articles</EmailSubtitle>
       <form onSubmit={handleSubmit}>
-        <EmailDiv>
+        <EmailContainer>
           <EmailInput placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <SubmitButton type="submit">Send</SubmitButton>
-        </EmailDiv>
+        </EmailContainer>
       </form>
     </Wrapper>
   )

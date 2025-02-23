@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-export const LinksDiv = styled.li`
+export const FooterContainer = styled.div`
+  padding: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
-  gap: 27px;
+  gap: 90px;
 `

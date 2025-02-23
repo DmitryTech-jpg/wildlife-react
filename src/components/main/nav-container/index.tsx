@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const NavDiv = styled.nav`
+export const NavContainer = styled.nav`
 ul {
     list-style: none;
     display: flex;

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MainDiv = styled.div`
+export const RootContainer = styled.div`
   left: 0;
   top: 0;
   margin: 0;

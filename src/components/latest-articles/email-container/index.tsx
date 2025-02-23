@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const EmailDiv = styled.div`
+export const EmailContainer = styled.div`
   margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
