@@ -1,7 +1,7 @@
 import './index.css'
-import { MainDiv } from './components/main-div'
+import { RootContainer } from './components/root-container'
 import { useState } from 'react'
-import { ModalDiv } from './components/modal-win'
+import { Modal } from './components/modal-container'
 import Header from './components/header'
 import { Wrapper } from './components/main/wrapper'
 import { Survival } from './components/main/survival'
@@ -15,10 +15,10 @@ function App() {
   const [isModalActive, setModalActive] = useState<boolean>(false)
 
   return (
-    <MainDiv>
+    <RootContainer>
       <Wrapper>
         <Header />
-        <ModalDiv active={isModalActive} setActive={setModalActive} />
+        <Modal active={isModalActive} setActive={setModalActive} />
         <Survival>
           <SurvivalText>Survival</SurvivalText>
           <SurvivalSubtitle>
@@ -32,7 +32,7 @@ function App() {
       </Wrapper>
       <LatestArticles />
       <Footer />
-    </MainDiv>
+    </RootContainer>
   )
 }
 
