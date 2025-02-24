@@ -6,4 +6,8 @@ export const AnimalsBlock = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 60px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `

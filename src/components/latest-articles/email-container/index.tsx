@@ -9,4 +9,8 @@ export const EmailContainer = styled.div`
   width: 600px;
   height: 62px;
   margin-bottom: 240px;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 90px;
+  }
 `

@@ -8,4 +8,8 @@ export const EmailSubtitle = styled.h3`
   color: #333333;
   text-align: center;
   margin-top: 240px;
+
+  @media (max-width: 1024px) {
+    margin-top: 90px;
+  }
 `

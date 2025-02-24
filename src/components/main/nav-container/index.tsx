@@ -12,5 +12,9 @@ ul {
     &:last-child {
         margin-right: 120px;
         margin-left: 60px;
+
+    @media (max-width: 768px) {
+      margin-left: 90px;
+    }
 }
 `

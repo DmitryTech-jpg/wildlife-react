@@ -7,4 +7,8 @@ export const Title = styled.h1`
   font-size: 32px;
   color: #f7f7f7;
   margin-left: 15px;
+
+  @media (max-width: 768px) {
+    margin-right: 0px;
+  }
 `
