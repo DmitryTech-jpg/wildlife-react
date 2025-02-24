@@ -6,4 +6,8 @@ export const FooterContainer = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 90px;
+
+  @media (max-width: 768px) {
+    gap: 60px;
+  }
 `

@@ -9,4 +9,16 @@ export const FooterNav = styled.nav`
     list-style-type: none;
     align-items: center;
     gap: 90px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-left: 0px;
+  }
 `

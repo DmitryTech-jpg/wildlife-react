@@ -9,4 +9,8 @@ export const Subtitle = styled.h2`
   color: #666666;
   text-align: center;
   margin-top: 20px;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 60px;
+  }
 `

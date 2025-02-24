@@ -8,4 +8,8 @@ export const Title = styled.h2`
   color: #333333;
   text-align: center;
   padding-top: 120px;
+
+  @media (max-width: 1024px) {
+    padding-top: 10px;
+  }
 `
