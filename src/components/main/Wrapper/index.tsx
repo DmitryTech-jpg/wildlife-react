@@ -8,6 +8,11 @@ export const Background = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (max-width: 420px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 type TWrapper = {
   children: React.ReactNode

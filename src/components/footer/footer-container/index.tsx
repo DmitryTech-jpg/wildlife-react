@@ -10,4 +10,8 @@ export const FooterContainer = styled.div`
   @media (max-width: 768px) {
     gap: 60px;
   }
+
+  @media (max-width: 420px) {
+    width: 100%;
+  }
 `
