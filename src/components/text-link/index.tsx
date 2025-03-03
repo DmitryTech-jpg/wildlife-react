@@ -7,6 +7,11 @@ export const LinkStyle = styled.a`
   font-style: normal;
   text-decoration: none;
   font-size: 23px;
+
+  @media (max-width: 420px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 interface LinkProps {
   children: React.ReactNode

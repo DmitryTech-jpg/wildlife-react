@@ -19,4 +19,7 @@ export const LinksContainer = styled.li`
     gap: 10px;
     margin-left: 50px;
   }
+  @media (max-width: 420px;) {
+    flex-direction: row;
+  }
 `

@@ -21,4 +21,7 @@ export const FooterNav = styled.nav`
       gap: 30px;
       margin-left: 0px;
   }
+    @media (max-width: 420px;) {
+    flex-direction: row;
+  }
 `
