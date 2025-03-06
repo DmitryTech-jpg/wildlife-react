@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Logo } from '../../icons/Logo'
+import { Logo } from '../../icons/logo'
 import { Title } from '../main/title'
 
 const LogoContainer = styled.div`

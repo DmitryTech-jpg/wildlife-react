@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { NavContainer } from '../main/nav-container'
 import { Navi } from '../main/navi'
-import { Magnifier } from '../../icons/Magnifier'
+import { Magnifier } from '../../icons/magnifier'
 import { LogoComponent } from '../logo-container'
 import { Button } from '../button'
 import { TextLink } from '../text-link'

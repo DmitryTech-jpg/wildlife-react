@@ -8,7 +8,7 @@ import { LinksStyle } from './links-style'
 import { Facebook } from '../../icons/facebook'
 import { Inst } from '../../icons/inst'
 import { Pinterest } from '../../icons/pinterest'
-import { Telegramm } from '../../icons/telegramm'
+import { Telegramm } from '../../icons/telegram'
 
 function Footer() {
   return (
